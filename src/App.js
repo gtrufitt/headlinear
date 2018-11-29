@@ -43,11 +43,13 @@ class App extends Component {
     this.handleTimeChange = this.handleTimeChange.bind(this);
     this.handleRangeChange = this.handleRangeChange.bind(this);
     
-    fetch('/.netlify/functions/getHeadlines').then(resp => resp.json()).then(val => this.setState({
-      sliderIsoTime: Number(val.timesArray[val.timesArray.length-1]),
-      sliderPosition: val.timesArray.length-1,
-      structuredData: val
-    }));
+    fetch('/.netlify/functions/getHeadlines')
+      .then(resp => resp.json())
+      .then(val => this.setState({
+        sliderIsoTime: Number(val.timesArray[val.timesArray.length-1]),
+        sliderPosition: val.timesArray.length-1,
+        structuredData: val
+      }));
   }
 
   handleTimeChange(event) {
@@ -64,9 +66,11 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-            <input className="slider" value={this.state.sliderPosition} onChange={this.handleRangeChange} type="range" min="0" max={this.state.structuredData.timesArray.length - 1}></input>
-            <input type="text" style={{visibility: 'hidden'}} value={this.state.sliderIsoTime} onChange={this.handleTimeChange}></input>
-            {format(this.state.sliderIsoTime, 'Do MMMM YYYY, H:mm')}
+          <p className="date">{format(this.state.sliderIsoTime, 'Do MMMM YYYY, H:mm')}</p>
+          
+          <input className="slider" value={this.state.sliderPosition} onChange={this.handleRangeChange} type="range" min="0" max={this.state.structuredData.timesArray.length - 1}></input>
+          <input type="text" style={{visibility: 'hidden', display: 'none'}} value={this.state.sliderIsoTime} onChange={this.handleTimeChange}></input>
+            
         </header>
         <ul className={'headlines-list'}>
           {

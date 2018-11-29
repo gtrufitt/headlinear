@@ -3,6 +3,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Karla');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
 h2 {
   color: #444444;
@@ -11,7 +12,7 @@ h2 {
 
 .App {
   text-align: center;
-  padding-top: 180px;
+  padding-top: 130px;
   background: #f6f6f6;
   font-family: 'Karla', sans-serif;
 }
@@ -22,7 +23,18 @@ h2 {
 }
 
 .App-logo {
-  width: 400px;
+  width: 250px;
+  float: left;
+}
+
+.date {
+  float: right;
+  text-align: right;
+  margin: 0;
+  margin-top: 8px;
+  display: block;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 25px;
 }
 
 .invisible {
@@ -38,18 +50,16 @@ h2 {
 }
 
 .App-header {
-  background-color: #ccc;
-  color: black;
+  background-color: #000;
+  color: #fff;
   padding-bottom: 10px;
-  display: flex;
   flex-direction: column;
   padding: 20px;
-  align-items: center;
   justify-content: top;
-  font-size: 20px;
+  font-size: 33px;
   position: fixed;
   top: 0;
-  min-height: 150px;
+  min-height: 100px;
   width: 100vw;
 }
 
