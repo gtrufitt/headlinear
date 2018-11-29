@@ -1,0 +1,34 @@
+{
+  "name": "headlinear",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "date-fns": "^1.29.0",
+    "moment": "^2.22.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-diff": "^0.0.7",
+    "react-diff-component": "^0.1.1",
+    "react-diff-components": "^0.0.4",
+    "react-dom": "^16.6.3",
+    "react-request": "^3.1.2",
+    "react-scripts": "2.1.1",
+    "remove-punctuation": "^0.0.4",
+    "string-similarity": "^2.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
