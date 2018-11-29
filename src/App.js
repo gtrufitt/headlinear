@@ -5,9 +5,7 @@ import stringSimilarity from 'string-similarity';
 import logo from './logo.svg';
 import './App.css';
 import './Slider.css';
-import getData from './Data';
 
-import getTime from 'date-fns/get_time';
 import isSameMinute from 'date-fns/is_same_minute'
 import format from 'date-fns/format';
 
@@ -45,7 +43,7 @@ class App extends Component {
     this.handleTimeChange = this.handleTimeChange.bind(this);
     this.handleRangeChange = this.handleRangeChange.bind(this);
     
-    getData.then(val => this.setState({
+    fetch('/.netlify/functions/getHeadlines').then(resp => resp.json()).then(val => this.setState({
       sliderIsoTime: Number(val.timesArray[val.timesArray.length-1]),
       sliderPosition: val.timesArray.length-1,
       structuredData: val
