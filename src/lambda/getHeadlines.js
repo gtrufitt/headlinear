@@ -56,7 +56,7 @@ fetch(sheetUrl).then(resp => resp.json()).then(data => {
     callback(null, {
         "isBase64Encoded": false,
         "statusCode": 200,
-        "headers": { "X-Gareth-Header": "Garethheadervalue" },
+        "headers": { "Cache-Control": "max-age=300" },
         "body": JSON.stringify(structureData(data))
     })
 });
